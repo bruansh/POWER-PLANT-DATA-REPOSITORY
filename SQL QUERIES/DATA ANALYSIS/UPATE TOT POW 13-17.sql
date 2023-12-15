@@ -1,0 +1,7 @@
+-- Add a new column to the table
+ALTER TABLE TOTAL_POWER_BY_FUEL
+ADD COLUMN POWER_TO_PLANT_RATIO_GWH INT;
+
+-- Update the new column with the count values
+UPDATE TOTAL_POWER_BY_FUEL
+SET POWER_TO_PLANT_RATIO_GWH = AVG_OUTPUT_13_7_GWH/COUNT_AS_FUEL_1;

@@ -1,0 +1,242 @@
+- Downloaded Data from WRI
+
+- Segmented data through excel because the file wasn't properly delimited 
+
+- Deleted "Owner" Column due to multiple NULL rows and corrupt data 
+
+- Moved "source", "url", "geolocation_source",	"wepp_id", and "year_of_capacity_data" into another csv file called metadata due to their uselessness in explaining anything about the data
+
+- Created separate tables so the data is easy to clean and understand 
+
+- Loaded the tables into PGadmin4 with the correct data type
+
+- Renamed columns
+
+- For the power generated table, we had the reported power generation for a given year along with estimatd power generated for that year by a given power plant. In a case where both were available, we used sql to select the reported over estimated. The results were compiled into the power generated gold table
+
+- Queried the data
+
+- Saved the queries and the the obtained results 
+
+- Used Tableau to visualize thee obtained Results
+
+
+
+Sequence of SQL Queries
+
+#CREATING TABLE
+
+
+CREATE TABLE NAME_LOCATION (GPPD_IDNR VARCHAR PRIMARY KEY,
+	                        NAME VARCHAR , COUNTRY CHAR(3),
+						    COUNTRY_LONG VARCHAR , LONGITUDE FLOAT , LATITUDE FLOAT);
+
+- loading data into table gives error as there is either formatting problem with the downloaded file which has added an extra delimitter at the end of the last column(namely, after latitude) after every row making pgadmin4 understand that there is an extra unspecified column in the table which there isn't OR there are a few unintended entries in column(s) after latitude
+- So we add a dummy column "dummy" in the table through pgadmin4 which would be a completely null column and delete it later once we have loaded the data
+
+
+
+#UPDATING TABLE NAME_LOCATION 
+
+ALTER TABLE NAME_LOCATION ADD DUMMY VARCHAR;
+
+-Data loaded in NAME_LOCATION successfully
+
+
+#UPDATING TABLE NAME_LOCATION AGAIN
+
+ALTER TABLE NAME_LOCATION DROP DUMMY
+
+
+#RENAMING TABLE NAME_LOCATION 
+
+ALTER TABLE NAME_LOCATION RENAME COLUMN GPPD_IDNR TO ID;
+
+
+
+
+
+#CREATING TABLE CAPACITY
+
+CREATE TABLE CAPACITY (GPPD_IDNR VARCHAR PRIMARY KEY,
+					   CAPACITY_MW FLOAT);
+
+-data loaded in CAPACITY succesfully
+
+
+#RENAMING CAPACITY
+
+ALTER TABLE CAPACITY RENAME COLUMN GPPD_IDNR TO ID;
+
+#UPDATING TABLE TO CONVERT FROM MEGAWATT TO GIGAWATT TO BE IN LINE WITH THE POWER OUTPUT
+
+UPDATE CAPACITY
+SET CAPACITY_MW = CAPACITY_MW * 0.001;
+
+
+ALTER TABLE CAPACITY 
+RENAME COLUMN CAPACITY_MW TO CAPACITY_GW;
+
+
+
+
+
+
+
+
+
+
+#CREATING TABLE FUEL_TYPES
+
+CREATE TABLE FUEL_TYPES (GPPD_IDNR VARCHAR PRIMARY KEY
+						 ,PRIMARY_FUEL VARCHAR
+						 ,OTHER_FUEL1 VARCHAR
+						 ,OTHER_FUEL2 VARCHAR
+						 ,OTHER_FUEL3 VARCHAR);
+
+-data loaded successfully 
+
+#RENAMING 
+
+ALTER TABLE FUEL_TYPES RENAME COLUMN GPPD_IDNR TO ID;
+
+
+ALTER TABLE FUEL_TYPES RENAME COLUMN PRIMARY_FUEL TO FUEL_1;
+
+
+ALTER TABLE FUEL_TYPES RENAME COLUMN OTHER_FUEL1 TO FUEL_2;
+
+
+ALTER TABLE FUEL_TYPES RENAME COLUMN OTHER_FUEL2 TO FUEL_3;
+
+
+ALTER TABLE FUEL_TYPES RENAME COLUMN OTHER_FUEL3 TO FUEL_4;
+
+
+
+
+
+#CREATING TABLE POWER_OUTPUT_BRONZE
+
+CREATE TABLE POWER_OUTPUT_BRONZE (GPPD_IDNR VARCHAR PRIMARY KEY
+						   ,generation_gwh_2013 FLOAT	
+						   ,generation_gwh_2014 FLOAT	
+						   ,generation_gwh_2015 FLOAT	
+						   ,generation_gwh_2016 FLOAT	
+						   ,generation_gwh_2017 FLOAT	
+						   ,generation_gwh_2018 FLOAT	
+						   ,generation_gwh_2019 FLOAT	
+						   ,estimated_generation_gwh_2013 FLOAT	
+						   ,estimated_generation_gwh_2014 FLOAT	
+						   ,estimated_generation_gwh_2015 FLOAT	
+						   ,estimated_generation_gwh_2016 FLOAT	
+						   ,estimated_generation_gwh_2017 FLOAT);
+						  
+						  
+-data imported successfully 
+
+
+#CREATING POWER_OUTPUT_SILVER 
+
+-WE RENAME GPPD_IDNR TO ID AND GENERATION TO THE FORMAT EST_GEN_20YZ OR REP_GEN_20YZ
+
+
+CREATE TABLE POWER_OUTPUT_SILVER AS (SELECT GPPD_IDNR AS ID
+						   ,generation_gwh_2013 AS REP_OUT_2013	
+						   ,generation_gwh_2014 AS REP_OUT_2014	
+						   ,generation_gwh_2015 AS REP_OUT_2015
+						   ,generation_gwh_2016 AS REP_OUT_2016
+						   ,generation_gwh_2017 AS REP_OUT_2017
+						   ,generation_gwh_2018 AS REP_OUT_2018
+						   ,generation_gwh_2019 AS REP_OUT_2019
+						   ,estimated_generation_gwh_2013 AS EST_OUT_2013	
+						   ,estimated_generation_gwh_2014 AS EST_OUT_2014	
+						   ,estimated_generation_gwh_2015 AS EST_OUT_2015	
+						   ,estimated_generation_gwh_2016 AS EST_OUT_2016	
+						   ,estimated_generation_gwh_2017 AS EST_OUT_2017
+									
+								FROM POWER_OUTPUT_BRONZE);
+
+
+-We now need to account for the fact that there are multiple columns reporting different values for the same variable. It so happens that when the official source has failed to provide the power output for a power plant, World Resource Institute has been able to estimate the output instead, which may not be accurate to the nth decimal point but is accurate enough. 
+-So, we create a new table POWER_OUTPUT_GOLD where we choose to keep the reported power output as the output for a plant where reported else we choose to keep the estimated power output and we combine these results under POWER_OUT_20YZ
+
+
+#CREATING POWER_OUTPUT_GOLD
+
+CREATE TABLE POWER_GENERATED_GOLD AS
+	(SELECT ID,
+			CASE
+							WHEN REP_OUT_2013 IS NULL THEN EST_OUT_2013
+							ELSE REP_OUT_2013
+			END POWER_OUT_2013,
+			CASE
+							WHEN REP_OUT_2014 IS NULL THEN EST_OUT_2014
+							ELSE REP_OUT_2014
+			END POWER_OUT_2014,
+			CASE
+							WHEN REP_OUT_2015 IS NULL THEN EST_OUT_2015
+							ELSE REP_OUT_2015
+			END POWER_OUT_2015,
+			CASE
+							WHEN REP_OUT_2016 IS NULL THEN EST_OUT_2016
+							ELSE REP_OUT_2016
+			END POWER_OUT_2016,
+			CASE
+							WHEN REP_OUT_2017 IS NULL THEN EST_OUT_2017
+							ELSE REP_OUT_2017
+			END POWER_OUT_2017,
+			REP_OUT_2018 AS POWER_OUT_2018,
+			REP_OUT_2019 AS POWER_OUT_2019
+	 
+		FROM POWER_OUTPUT_SILVER);
+
+
+
+
+
+
+#CREATING TABLE ESTABLISHED_YEAR
+
+CREATE TABLE ESTABLISHED_YEAR (GDDP_IDNR VARCHAR PRIMARY KEY
+                              ,COMMISSIONING_YEAR VARCHAR)
+
+-We use VARCHAR instead of CHAR(4) for Year as some entries have a decimal place signifying the month. This will be removed later
+-Data imported successfully
+
+#UPDATING TABLE
+
+
+UPDATE ESTABLISHED_YEAR
+SET COMMISSIONING_YEAR = regexp_replace(COMMISSIONING_YEAR, E'\\..*$', '', 'g')
+WHERE COMMISSIONING_YEAR ~ E'^\\d+\\.\\d+$';
+
+ALTER TABLE ESTABLISHED_YEAR
+RENAME GDDP_IDNR TO ID;
+
+
+-The regexp_replace() function removes everything from the first decimal point (.) to the end of the string, effectively removing the decimal part of the number
+-The WHERE clause ensures that only rows containing a valid decimal number are updated
+-HOPEFULLY THE FACT THAT I CAN DO SOME ADVANCED SQL FUNCTIONS IMPRESSES SOME RECRUITERS. SO, IF YOU ARE ONE, BE IMPRESSED AHAHA
+
+
+
+
+
+
+-- WE DROP POWER_OUT_18 AND 19 FROM THE POWER_OUT_GOLD TABLE AS MOST OF THE COLUMN IS EMPTY AND WOULD CAUSE PROBLEMS IN ANALYSIS OF THE DATA
+
+ALTER TABLE POWER_GENERATED_GOLD
+DROP COLUMN POWER_OUT_2018;
+
+
+ALTER TABLE POWER_GENERATED_GOLD
+DROP COLUMN POWER_OUT_2019;
+
+
+
+
+
+
+
+

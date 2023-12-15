@@ -1,0 +1,1871 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20232.23.0909.1159                               -->
+<workbook original-version='18.1' source-build='2023.2.2 (20232.23.0909.1159)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='AVG POWER OUT BY FUEL' inline='true' name='federated.0sl0c4w0rs4rzn15e3g5k1waj2qq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='AVG POWER OUT BY FUEL' name='textscan.0eqq38r01wde3t12nt8zc1ehb3ke'>
+            <connection class='textscan' directory='/Users/ansh/Desktop/POWER PLANT DATA REPOSITORY/SQL QUERIES/QUERY RESULTS' filename='AVG POWER OUT BY FUEL.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0eqq38r01wde3t12nt8zc1ehb3ke' name='AVG POWER OUT BY FUEL.csv' table='[AVG POWER OUT BY FUEL#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='fuel' ordinal='0' />
+            <column datatype='real' name='avg_output_13_to_17_gwh' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.0eqq38r01wde3t12nt8zc1ehb3ke' name='AVG POWER OUT BY FUEL.csv' table='[AVG POWER OUT BY FUEL#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='fuel' ordinal='0' />
+            <column datatype='real' name='avg_output_13_to_17_gwh' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AVG POWER OUT BY FUEL.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fuel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fuel]</local-name>
+            <parent-name>[AVG POWER OUT BY FUEL.csv]</parent-name>
+            <remote-alias>fuel</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AVG POWER OUT BY FUEL.csv_39BB496590614E5AB1A1E9DBB997A697]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_output_13_to_17_gwh</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_output_13_to_17_gwh]</local-name>
+            <parent-name>[AVG POWER OUT BY FUEL.csv]</parent-name>
+            <remote-alias>avg_output_13_to_17_gwh</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AVG POWER OUT BY FUEL.csv_39BB496590614E5AB1A1E9DBB997A697]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='AVG POWER OUT BY FUEL.csv' datatype='table' name='[__tableau_internal_object_id__].[AVG POWER OUT BY FUEL.csv_39BB496590614E5AB1A1E9DBB997A697]' role='measure' type='quantitative' />
+      <column caption='Avg Output 13 To 17 Gwh' datatype='real' name='[avg_output_13_to_17_gwh]' role='measure' type='quantitative' />
+      <column caption='Fuel' datatype='string' name='[fuel]' role='dimension' type='nominal' />
+      <column-instance column='[fuel]' derivation='None' name='[none:fuel:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:fuel:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Biomass&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Geothermal&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;Waste&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Petcoke&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Hydro&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Coal&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Nuclear&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Wind&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Solar&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Oil&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Cogeneration&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;Storage&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Gas&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='AVG POWER OUT BY FUEL.csv' id='AVG POWER OUT BY FUEL.csv_39BB496590614E5AB1A1E9DBB997A697'>
+            <properties context=''>
+              <relation connection='textscan.0eqq38r01wde3t12nt8zc1ehb3ke' name='AVG POWER OUT BY FUEL.csv' table='[AVG POWER OUT BY FUEL#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='fuel' ordinal='0' />
+                  <column datatype='real' name='avg_output_13_to_17_gwh' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='POWER_PLANT_COUNT_BY_COUNTRY' inline='true' name='federated.1fu17pp00kc6wu13w7sln1ujlo4g' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='POWER_PLANT_COUNT_BY_COUNTRY' name='textscan.0nzkpec17taiop1bb2e090r1shzc'>
+            <connection class='textscan' directory='/Users/ansh/Desktop/POWER PLANT DATA REPOSITORY/SQL QUERIES/QUERY RESULTS' filename='POWER_PLANT_COUNT_BY_COUNTRY.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0nzkpec17taiop1bb2e090r1shzc' name='AVG POWER OUTPUT 13-17.csv' table='[AVG POWER OUTPUT 13-17#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='country' ordinal='0' />
+            <column datatype='real' name='avg_output_gwh_13_to_17' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0nzkpec17taiop1bb2e090r1shzc' name='POWER_PLANT_COUNT_BY_COUNTRY.csv' table='[POWER_PLANT_COUNT_BY_COUNTRY#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='country' ordinal='0' />
+              <column datatype='integer' name='number_of_power_plants' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0nzkpec17taiop1bb2e090r1shzc' name='AVG POWER OUTPUT 13-17.csv' table='[AVG POWER OUTPUT 13-17#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='country' ordinal='0' />
+              <column datatype='real' name='avg_output_gwh_13_to_17' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[avg_output_gwh_13_to_17]' value='[AVG POWER OUTPUT 13-17.csv].[avg_output_gwh_13_to_17]' />
+          <map key='[country (AVG POWER OUTPUT 13-17.csv)]' value='[AVG POWER OUTPUT 13-17.csv].[country]' />
+          <map key='[country]' value='[POWER_PLANT_COUNT_BY_COUNTRY.csv].[country]' />
+          <map key='[number_of_power_plants]' value='[POWER_PLANT_COUNT_BY_COUNTRY.csv].[number_of_power_plants]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[POWER_PLANT_COUNT_BY_COUNTRY.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AVG POWER OUTPUT 13-17.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[POWER_PLANT_COUNT_BY_COUNTRY.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[POWER_PLANT_COUNT_BY_COUNTRY.csv_0C6A7EC626954390AF510193DB5E30BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>number_of_power_plants</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[number_of_power_plants]</local-name>
+            <parent-name>[POWER_PLANT_COUNT_BY_COUNTRY.csv]</parent-name>
+            <remote-alias>number_of_power_plants</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[POWER_PLANT_COUNT_BY_COUNTRY.csv_0C6A7EC626954390AF510193DB5E30BE]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country (AVG POWER OUTPUT 13-17.csv)]</local-name>
+            <parent-name>[AVG POWER OUTPUT 13-17.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AVG POWER OUTPUT 13-17.csv_09B9E459197B41BFAE345E840E48E440]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_output_gwh_13_to_17</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_output_gwh_13_to_17]</local-name>
+            <parent-name>[AVG POWER OUTPUT 13-17.csv]</parent-name>
+            <remote-alias>avg_output_gwh_13_to_17</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AVG POWER OUTPUT 13-17.csv_09B9E459197B41BFAE345E840E48E440]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='AVG POWER OUTPUT 13-17.csv' datatype='table' name='[__tableau_internal_object_id__].[AVG POWER OUTPUT 13-17.csv_09B9E459197B41BFAE345E840E48E440]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='POWER_PLANT_COUNT_BY_COUNTRY.csv' datatype='table' name='[__tableau_internal_object_id__].[POWER_PLANT_COUNT_BY_COUNTRY.csv_0C6A7EC626954390AF510193DB5E30BE]' role='measure' type='quantitative' />
+      <column caption='Avg Output Gwh 13 To 17' datatype='real' name='[avg_output_gwh_13_to_17]' role='measure' type='quantitative' />
+      <column datatype='string' name='[country (AVG POWER OUTPUT 13-17.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Number Of Power Plants' datatype='integer' name='[number_of_power_plants]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='AVG POWER OUTPUT 13-17.csv' id='AVG POWER OUTPUT 13-17.csv_09B9E459197B41BFAE345E840E48E440'>
+            <properties context=''>
+              <relation connection='textscan.0nzkpec17taiop1bb2e090r1shzc' name='AVG POWER OUTPUT 13-17.csv' table='[AVG POWER OUTPUT 13-17#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='country' ordinal='0' />
+                  <column datatype='real' name='avg_output_gwh_13_to_17' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='POWER_PLANT_COUNT_BY_COUNTRY.csv' id='POWER_PLANT_COUNT_BY_COUNTRY.csv_0C6A7EC626954390AF510193DB5E30BE'>
+            <properties context=''>
+              <relation connection='textscan.0nzkpec17taiop1bb2e090r1shzc' name='POWER_PLANT_COUNT_BY_COUNTRY.csv' table='[POWER_PLANT_COUNT_BY_COUNTRY#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='country' ordinal='0' />
+                  <column datatype='integer' name='number_of_power_plants' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[country]' />
+              <expression op='[country (AVG POWER OUTPUT 13-17.csv)]' />
+            </expression>
+            <first-end-point object-id='POWER_PLANT_COUNT_BY_COUNTRY.csv_0C6A7EC626954390AF510193DB5E30BE' />
+            <second-end-point object-id='AVG POWER OUTPUT 13-17.csv_09B9E459197B41BFAE345E840E48E440' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='AVG POWER OUTPUT 13-17' inline='true' name='federated.0coqpjl0z9wkpz19hbrhe1xqrcwk' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='AVG POWER OUTPUT 13-17' name='textscan.14mhp8v095y8ej1bq381g0x0qnmc'>
+            <connection class='textscan' directory='/Users/ansh/Desktop/POWER PLANT DATA REPOSITORY/SQL QUERIES/QUERY RESULTS' filename='AVG POWER OUTPUT 13-17.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation all='true' name='AVG POWER OUTPUT 13-17.csv+' type='union'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='country' />
+            <column datatype='real' name='avg_output_gwh_13_to_17' />
+            <column datatype='string' name='Table Name' />
+          </columns>
+          <relation connection='textscan.14mhp8v095y8ej1bq381g0x0qnmc' name='AVG POWER OUTPUT 13-17.csv' table='[AVG POWER OUTPUT 13-17#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='country' ordinal='0' />
+              <column datatype='real' name='avg_output_gwh_13_to_17' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation all='true' name='AVG POWER OUTPUT 13-17.csv+' type='union'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='country' />
+              <column datatype='real' name='avg_output_gwh_13_to_17' />
+              <column datatype='string' name='Table Name' />
+            </columns>
+            <relation connection='textscan.14mhp8v095y8ej1bq381g0x0qnmc' name='AVG POWER OUTPUT 13-17.csv' table='[AVG POWER OUTPUT 13-17#csv]' type='table'>
+              <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                <column datatype='string' name='country' ordinal='0' />
+                <column datatype='real' name='avg_output_gwh_13_to_17' ordinal='1' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='textscan.14mhp8v095y8ej1bq381g0x0qnmc' name='POWER_PLANT_COUNT_BY_COUNTRY.csv' table='[POWER_PLANT_COUNT_BY_COUNTRY#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='country' ordinal='0' />
+              <column datatype='integer' name='number_of_power_plants' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.14mhp8v095y8ej1bq381g0x0qnmc' name='AVG POWER OUTPUT 13-17.csv1' table='[AVG POWER OUTPUT 13-17#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+              <column datatype='string' name='country' ordinal='0' />
+              <column datatype='real' name='avg_output_gwh_13_to_17' ordinal='1' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[Table Name]' value='[AVG POWER OUTPUT 13-17.csv+].[Table Name]' />
+          <map key='[avg_output_gwh_13_to_17 (AVG POWER OUTPUT 13-17.csv1)]' value='[AVG POWER OUTPUT 13-17.csv1].[avg_output_gwh_13_to_17]' />
+          <map key='[avg_output_gwh_13_to_17]' value='[AVG POWER OUTPUT 13-17.csv+].[avg_output_gwh_13_to_17]' />
+          <map key='[country (AVG POWER OUTPUT 13-17.csv1)]' value='[AVG POWER OUTPUT 13-17.csv1].[country]' />
+          <map key='[country (POWER_PLANT_COUNT_BY_COUNTRY.csv)]' value='[POWER_PLANT_COUNT_BY_COUNTRY.csv].[country]' />
+          <map key='[country]' value='[AVG POWER OUTPUT 13-17.csv+].[country]' />
+          <map key='[number_of_power_plants]' value='[POWER_PLANT_COUNT_BY_COUNTRY.csv].[number_of_power_plants]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AVG POWER OUTPUT 13-17.csv+]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[POWER_PLANT_COUNT_BY_COUNTRY.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[AVG POWER OUTPUT 13-17.csv1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[AVG POWER OUTPUT 13-17.csv+]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AVG POWER OUTPUT 13-17.csv_77185D9D6CC545178F8C0BEA05FADA33]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_output_gwh_13_to_17</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_output_gwh_13_to_17]</local-name>
+            <parent-name>[AVG POWER OUTPUT 13-17.csv+]</parent-name>
+            <remote-alias>avg_output_gwh_13_to_17</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AVG POWER OUTPUT 13-17.csv_77185D9D6CC545178F8C0BEA05FADA33]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Table Name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Table Name]</local-name>
+            <parent-name>[AVG POWER OUTPUT 13-17.csv+]</parent-name>
+            <remote-alias>Table Name</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AVG POWER OUTPUT 13-17.csv_77185D9D6CC545178F8C0BEA05FADA33]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country (POWER_PLANT_COUNT_BY_COUNTRY.csv)]</local-name>
+            <parent-name>[POWER_PLANT_COUNT_BY_COUNTRY.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[POWER_PLANT_COUNT_BY_COUNTRY.csv_1FE87519F693444AA693E8635590A63A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>number_of_power_plants</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[number_of_power_plants]</local-name>
+            <parent-name>[POWER_PLANT_COUNT_BY_COUNTRY.csv]</parent-name>
+            <remote-alias>number_of_power_plants</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[POWER_PLANT_COUNT_BY_COUNTRY.csv_1FE87519F693444AA693E8635590A63A]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country (AVG POWER OUTPUT 13-17.csv1)]</local-name>
+            <parent-name>[AVG POWER OUTPUT 13-17.csv1]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AVG POWER OUTPUT 13-17.csv_9266051CBBF640A08BFEA488771E152B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_output_gwh_13_to_17</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_output_gwh_13_to_17 (AVG POWER OUTPUT 13-17.csv1)]</local-name>
+            <parent-name>[AVG POWER OUTPUT 13-17.csv1]</parent-name>
+            <remote-alias>avg_output_gwh_13_to_17</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[AVG POWER OUTPUT 13-17.csv_9266051CBBF640A08BFEA488771E152B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='AVG POWER OUTPUT 13-17.csv' datatype='table' name='[__tableau_internal_object_id__].[AVG POWER OUTPUT 13-17.csv_77185D9D6CC545178F8C0BEA05FADA33]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='AVG POWER OUTPUT 13-17.csv1' datatype='table' name='[__tableau_internal_object_id__].[AVG POWER OUTPUT 13-17.csv_9266051CBBF640A08BFEA488771E152B]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='POWER_PLANT_COUNT_BY_COUNTRY.csv' datatype='table' name='[__tableau_internal_object_id__].[POWER_PLANT_COUNT_BY_COUNTRY.csv_1FE87519F693444AA693E8635590A63A]' role='measure' type='quantitative' />
+      <column caption='avg output gwh 13 to 17 (AVG POWER OUTPUT 13-17.csv1)' datatype='real' name='[avg_output_gwh_13_to_17 (AVG POWER OUTPUT 13-17.csv1)]' role='measure' type='quantitative' />
+      <column caption='Avg Output Gwh 13 To 17' datatype='real' name='[avg_output_gwh_13_to_17]' role='measure' type='quantitative' />
+      <column datatype='string' name='[country (AVG POWER OUTPUT 13-17.csv1)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='country (POWER PLANT COUNT BY COUNTRY.csv)' datatype='string' name='[country (POWER_PLANT_COUNT_BY_COUNTRY.csv)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Number Of Power Plants' datatype='integer' name='[number_of_power_plants]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='AVG POWER OUTPUT 13-17.csv' id='AVG POWER OUTPUT 13-17.csv_77185D9D6CC545178F8C0BEA05FADA33'>
+            <properties context=''>
+              <relation all='true' name='AVG POWER OUTPUT 13-17.csv+' type='union'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='country' />
+                  <column datatype='real' name='avg_output_gwh_13_to_17' />
+                  <column datatype='string' name='Table Name' />
+                </columns>
+                <relation connection='textscan.14mhp8v095y8ej1bq381g0x0qnmc' name='AVG POWER OUTPUT 13-17.csv' table='[AVG POWER OUTPUT 13-17#csv]' type='table'>
+                  <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                    <column datatype='string' name='country' ordinal='0' />
+                    <column datatype='real' name='avg_output_gwh_13_to_17' ordinal='1' />
+                  </columns>
+                </relation>
+              </relation>
+            </properties>
+          </object>
+          <object caption='AVG POWER OUTPUT 13-17.csv1' id='AVG POWER OUTPUT 13-17.csv_9266051CBBF640A08BFEA488771E152B'>
+            <properties context=''>
+              <relation connection='textscan.14mhp8v095y8ej1bq381g0x0qnmc' name='AVG POWER OUTPUT 13-17.csv1' table='[AVG POWER OUTPUT 13-17#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='country' ordinal='0' />
+                  <column datatype='real' name='avg_output_gwh_13_to_17' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='POWER_PLANT_COUNT_BY_COUNTRY.csv' id='POWER_PLANT_COUNT_BY_COUNTRY.csv_1FE87519F693444AA693E8635590A63A'>
+            <properties context=''>
+              <relation connection='textscan.14mhp8v095y8ej1bq381g0x0qnmc' name='POWER_PLANT_COUNT_BY_COUNTRY.csv' table='[POWER_PLANT_COUNT_BY_COUNTRY#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='country' ordinal='0' />
+                  <column datatype='integer' name='number_of_power_plants' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[country (POWER_PLANT_COUNT_BY_COUNTRY.csv)]' />
+              <expression op='[country (AVG POWER OUTPUT 13-17.csv1)]' />
+            </expression>
+            <first-end-point object-id='POWER_PLANT_COUNT_BY_COUNTRY.csv_1FE87519F693444AA693E8635590A63A' />
+            <second-end-point object-id='AVG POWER OUTPUT 13-17.csv_9266051CBBF640A08BFEA488771E152B' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[country]' />
+              <expression op='[country (POWER_PLANT_COUNT_BY_COUNTRY.csv)]' />
+            </expression>
+            <first-end-point object-id='AVG POWER OUTPUT 13-17.csv_77185D9D6CC545178F8C0BEA05FADA33' />
+            <second-end-point object-id='POWER_PLANT_COUNT_BY_COUNTRY.csv_1FE87519F693444AA693E8635590A63A' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='DIFFERENT FUEL TYPES COUNT' inline='true' name='federated.1p27iui0qk01ha14arllh1lc71zt' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='DIFFERENT FUEL TYPES COUNT' name='textscan.1nqj6hp0znit6q183dixl02bddca'>
+            <connection class='textscan' directory='/Users/ansh/Desktop/POWER PLANT DATA REPOSITORY/SQL QUERIES/QUERY RESULTS' filename='DIFFERENT FUEL TYPES COUNT.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='AVG POWER OUTPUT 13-17' name='textscan.1mor7221pfqee5100ifre08qkx16'>
+            <connection class='textscan' directory='/Users/ansh/Desktop/POWER PLANT DATA REPOSITORY/SQL QUERIES/QUERY RESULTS' filename='AVG POWER OUTPUT 13-17.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='max and avg cap by country' name='textscan.0zw1yz5070ayr7155824z1gx45bz'>
+            <connection class='textscan' directory='/Users/ansh/Desktop/POWER PLANT DATA REPOSITORY/SQL QUERIES/QUERY RESULTS' filename='max and avg cap by country.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.1nqj6hp0znit6q183dixl02bddca' name='DIFFERENT FUEL TYPES COUNT.csv' table='[DIFFERENT FUEL TYPES COUNT#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='fuel' ordinal='0' />
+            <column datatype='integer' name='count_as_fuel_1' ordinal='1' />
+            <column datatype='integer' name='count_as_fuel_2' ordinal='2' />
+            <column datatype='integer' name='count_as_fuel_3' ordinal='3' />
+            <column datatype='integer' name='count_as_fuel_4' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation connection='textscan.1nqj6hp0znit6q183dixl02bddca' name='DIFFERENT FUEL TYPES COUNT.csv' table='[DIFFERENT FUEL TYPES COUNT#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='fuel' ordinal='0' />
+            <column datatype='integer' name='count_as_fuel_1' ordinal='1' />
+            <column datatype='integer' name='count_as_fuel_2' ordinal='2' />
+            <column datatype='integer' name='count_as_fuel_3' ordinal='3' />
+            <column datatype='integer' name='count_as_fuel_4' ordinal='4' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[DIFFERENT FUEL TYPES COUNT.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fuel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fuel]</local-name>
+            <parent-name>[DIFFERENT FUEL TYPES COUNT.csv]</parent-name>
+            <remote-alias>fuel</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIFFERENT FUEL TYPES COUNT.csv_1F9AE8A1E57E45359C25B38CD1194C48]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_as_fuel_1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_as_fuel_1]</local-name>
+            <parent-name>[DIFFERENT FUEL TYPES COUNT.csv]</parent-name>
+            <remote-alias>count_as_fuel_1</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIFFERENT FUEL TYPES COUNT.csv_1F9AE8A1E57E45359C25B38CD1194C48]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_as_fuel_2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_as_fuel_2]</local-name>
+            <parent-name>[DIFFERENT FUEL TYPES COUNT.csv]</parent-name>
+            <remote-alias>count_as_fuel_2</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIFFERENT FUEL TYPES COUNT.csv_1F9AE8A1E57E45359C25B38CD1194C48]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_as_fuel_3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_as_fuel_3]</local-name>
+            <parent-name>[DIFFERENT FUEL TYPES COUNT.csv]</parent-name>
+            <remote-alias>count_as_fuel_3</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIFFERENT FUEL TYPES COUNT.csv_1F9AE8A1E57E45359C25B38CD1194C48]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>count_as_fuel_4</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[count_as_fuel_4]</local-name>
+            <parent-name>[DIFFERENT FUEL TYPES COUNT.csv]</parent-name>
+            <remote-alias>count_as_fuel_4</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[DIFFERENT FUEL TYPES COUNT.csv_1F9AE8A1E57E45359C25B38CD1194C48]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='DIFFERENT FUEL TYPES COUNT.csv' datatype='table' name='[__tableau_internal_object_id__].[DIFFERENT FUEL TYPES COUNT.csv_1F9AE8A1E57E45359C25B38CD1194C48]' role='measure' type='quantitative' />
+      <column caption='Count As Fuel 1' datatype='integer' name='[count_as_fuel_1]' role='measure' type='quantitative' />
+      <column caption='Count As Fuel 2' datatype='integer' name='[count_as_fuel_2]' role='measure' type='quantitative' />
+      <column caption='Count As Fuel 3' datatype='integer' name='[count_as_fuel_3]' role='measure' type='quantitative' />
+      <column caption='Count As Fuel 4' datatype='integer' name='[count_as_fuel_4]' role='measure' type='quantitative' />
+      <column caption='Fuel' datatype='string' name='[fuel]' role='dimension' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United Kingdom&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='DIFFERENT FUEL TYPES COUNT.csv' id='DIFFERENT FUEL TYPES COUNT.csv_1F9AE8A1E57E45359C25B38CD1194C48'>
+            <properties context=''>
+              <relation connection='textscan.1nqj6hp0znit6q183dixl02bddca' name='DIFFERENT FUEL TYPES COUNT.csv' table='[DIFFERENT FUEL TYPES COUNT#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+                  <column datatype='string' name='fuel' ordinal='0' />
+                  <column datatype='integer' name='count_as_fuel_1' ordinal='1' />
+                  <column datatype='integer' name='count_as_fuel_2' ordinal='2' />
+                  <column datatype='integer' name='count_as_fuel_3' ordinal='3' />
+                  <column datatype='integer' name='count_as_fuel_4' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-dependencies datasource='federated.0coqpjl0z9wkpz19hbrhe1xqrcwk'>
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='federated.1fu17pp00kc6wu13w7sln1ujlo4g'>
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-relationship source='federated.0coqpjl0z9wkpz19hbrhe1xqrcwk' target='federated.0sl0c4w0rs4rzn15e3g5k1waj2qq'>
+      <column-mapping />
+    </datasource-relationship>
+    <datasource-relationship source='federated.0coqpjl0z9wkpz19hbrhe1xqrcwk' target='federated.1fu17pp00kc6wu13w7sln1ujlo4g'>
+      <column-mapping>
+        <map key='[federated.1fu17pp00kc6wu13w7sln1ujlo4g].[none:country:nk]' value='[federated.0coqpjl0z9wkpz19hbrhe1xqrcwk].[none:country:nk]' />
+      </column-mapping>
+    </datasource-relationship>
+    <datasource-relationship source='federated.1fu17pp00kc6wu13w7sln1ujlo4g' target='federated.0sl0c4w0rs4rzn15e3g5k1waj2qq'>
+      <column-mapping />
+    </datasource-relationship>
+  </datasource-relationships>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='POWER FROM A COUNTRY VS THE NUMBER OF POWER PLANTS IT HAS'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1'>POWER GENERATED BY A COUNTRY VS THE NUMBER OF POWER PLANTS IT HAS</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='POWER_PLANT_COUNT_BY_COUNTRY' name='federated.1fu17pp00kc6wu13w7sln1ujlo4g' />
+            <datasource caption='AVG POWER OUTPUT 13-17' name='federated.0coqpjl0z9wkpz19hbrhe1xqrcwk' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0coqpjl0z9wkpz19hbrhe1xqrcwk'>
+            <column caption='Avg Output Gwh 13 To 17' datatype='real' name='[avg_output_gwh_13_to_17]' role='measure' type='quantitative' />
+            <column-instance column='[avg_output_gwh_13_to_17]' derivation='Sum' name='[sum:avg_output_gwh_13_to_17:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1fu17pp00kc6wu13w7sln1ujlo4g'>
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column caption='Number Of Power Plants' datatype='integer' name='[number_of_power_plants]' role='measure' type='quantitative' />
+            <column-instance column='[number_of_power_plants]' derivation='Sum' name='[sum:number_of_power_plants:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='quantitative' column='[federated.0coqpjl0z9wkpz19hbrhe1xqrcwk].[sum:avg_output_gwh_13_to_17:qk]' included-values='non-null' />
+          <manual-sort column='[federated.1fu17pp00kc6wu13w7sln1ujlo4g].[none:country:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;United States of America&quot;</bucket>
+              <bucket>&quot;China&quot;</bucket>
+              <bucket>&quot;India&quot;</bucket>
+              <bucket>&quot;Brazil&quot;</bucket>
+              <bucket>&quot;Canada&quot;</bucket>
+              <bucket>&quot;Russia&quot;</bucket>
+              <bucket>&quot;France&quot;</bucket>
+              <bucket>&quot;Japan&quot;</bucket>
+              <bucket>&quot;Germany&quot;</bucket>
+              <bucket>&quot;Australia&quot;</bucket>
+              <bucket>&quot;Spain&quot;</bucket>
+              <bucket>&quot;South Korea&quot;</bucket>
+              <bucket>&quot;Norway&quot;</bucket>
+              <bucket>&quot;Italy&quot;</bucket>
+              <bucket>&quot;Mexico&quot;</bucket>
+              <bucket>&quot;Venezuela&quot;</bucket>
+              <bucket>&quot;United Kingdom&quot;</bucket>
+              <bucket>&quot;Vietnam&quot;</bucket>
+              <bucket>&quot;Turkey&quot;</bucket>
+              <bucket>&quot;Poland&quot;</bucket>
+              <bucket>&quot;Iran&quot;</bucket>
+              <bucket>&quot;Sweden&quot;</bucket>
+              <bucket>&quot;Saudi Arabia&quot;</bucket>
+              <bucket>&quot;South Africa&quot;</bucket>
+              <bucket>&quot;Egypt&quot;</bucket>
+              <bucket>&quot;Indonesia&quot;</bucket>
+              <bucket>&quot;Argentina&quot;</bucket>
+              <bucket>&quot;Ukraine&quot;</bucket>
+              <bucket>&quot;Thailand&quot;</bucket>
+              <bucket>&quot;Taiwan&quot;</bucket>
+              <bucket>&quot;Pakistan&quot;</bucket>
+              <bucket>&quot;Malaysia&quot;</bucket>
+              <bucket>&quot;Netherlands&quot;</bucket>
+              <bucket>&quot;Chile&quot;</bucket>
+              <bucket>&quot;Czech Republic&quot;</bucket>
+              <bucket>&quot;Paraguay&quot;</bucket>
+              <bucket>&quot;Belgium&quot;</bucket>
+              <bucket>&quot;Switzerland&quot;</bucket>
+              <bucket>&quot;Austria&quot;</bucket>
+              <bucket>&quot;Portugal&quot;</bucket>
+              <bucket>&quot;United Arab Emirates&quot;</bucket>
+              <bucket>&quot;Colombia&quot;</bucket>
+              <bucket>&quot;Philippines&quot;</bucket>
+              <bucket>&quot;Romania&quot;</bucket>
+              <bucket>&quot;Kazakhstan&quot;</bucket>
+              <bucket>&quot;Greece&quot;</bucket>
+              <bucket>&quot;Finland&quot;</bucket>
+              <bucket>&quot;Peru&quot;</bucket>
+              <bucket>&quot;Bulgaria&quot;</bucket>
+              <bucket>&quot;New Zealand&quot;</bucket>
+              <bucket>&quot;Israel&quot;</bucket>
+              <bucket>&quot;Tajikistan&quot;</bucket>
+              <bucket>&quot;Iraq&quot;</bucket>
+              <bucket>&quot;Serbia&quot;</bucket>
+              <bucket>&quot;Uzbekistan&quot;</bucket>
+              <bucket>&quot;Bangladesh&quot;</bucket>
+              <bucket>&quot;Ecuador&quot;</bucket>
+              <bucket>&quot;Ethiopia&quot;</bucket>
+              <bucket>&quot;Algeria&quot;</bucket>
+              <bucket>&quot;Hungary&quot;</bucket>
+              <bucket>&quot;Myanmar&quot;</bucket>
+              <bucket>&quot;Kuwait&quot;</bucket>
+              <bucket>&quot;Denmark&quot;</bucket>
+              <bucket>&quot;Morocco&quot;</bucket>
+              <bucket>&quot;North Korea&quot;</bucket>
+              <bucket>&quot;Ireland&quot;</bucket>
+              <bucket>&quot;Zambia&quot;</bucket>
+              <bucket>&quot;Slovakia&quot;</bucket>
+              <bucket>&quot;Bahrain&quot;</bucket>
+              <bucket>&quot;Laos&quot;</bucket>
+              <bucket>&quot;Kyrgyzstan&quot;</bucket>
+              <bucket>&quot;Bosnia and Herzegovina&quot;</bucket>
+              <bucket>&quot;Uruguay&quot;</bucket>
+              <bucket>&quot;Georgia&quot;</bucket>
+              <bucket>&quot;Syrian Arab Republic&quot;</bucket>
+              <bucket>&quot;Slovenia&quot;</bucket>
+              <bucket>&quot;Belarus&quot;</bucket>
+              <bucket>&quot;Ghana&quot;</bucket>
+              <bucket>&quot;Sri Lanka&quot;</bucket>
+              <bucket>&quot;Croatia&quot;</bucket>
+              <bucket>&quot;Azerbaijan&quot;</bucket>
+              <bucket>&quot;Oman&quot;</bucket>
+              <bucket>&quot;Jordan&quot;</bucket>
+              <bucket>&quot;Tunisia&quot;</bucket>
+              <bucket>&quot;Iceland&quot;</bucket>
+              <bucket>&quot;Estonia&quot;</bucket>
+              <bucket>&quot;Bhutan&quot;</bucket>
+              <bucket>&quot;Nigeria&quot;</bucket>
+              <bucket>&quot;Democratic Republic of the Congo&quot;</bucket>
+              <bucket>&quot;Kenya&quot;</bucket>
+              <bucket>&quot;Albania&quot;</bucket>
+              <bucket>&quot;Guatemala&quot;</bucket>
+              <bucket>&quot;Costa Rica&quot;</bucket>
+              <bucket>&quot;Zimbabwe&quot;</bucket>
+              <bucket>&quot;Armenia&quot;</bucket>
+              <bucket>&quot;Latvia&quot;</bucket>
+              <bucket>&quot;Panama&quot;</bucket>
+              <bucket>&quot;Honduras&quot;</bucket>
+              <bucket>&quot;Mozambique&quot;</bucket>
+              <bucket>&quot;Sudan&quot;</bucket>
+              <bucket>&quot;Cameroon&quot;</bucket>
+              <bucket>&quot;Angola&quot;</bucket>
+              <bucket>&quot;Uganda&quot;</bucket>
+              <bucket>&quot;Tanzania&quot;</bucket>
+              <bucket>&quot;Bolivia&quot;</bucket>
+              <bucket>&quot;El Salvador&quot;</bucket>
+              <bucket>&quot;Nepal&quot;</bucket>
+              <bucket>&quot;Cuba&quot;</bucket>
+              <bucket>&quot;Luxembourg&quot;</bucket>
+              <bucket>&quot;Lithuania&quot;</bucket>
+              <bucket>&quot;Montenegro&quot;</bucket>
+              <bucket>&quot;Macedonia&quot;</bucket>
+              <bucket>&quot;Cote DIvoire&quot;</bucket>
+              <bucket>&quot;Cambodia&quot;</bucket>
+              <bucket>&quot;Malawi&quot;</bucket>
+              <bucket>&quot;Dominican Republic&quot;</bucket>
+              <bucket>&quot;Mali&quot;</bucket>
+              <bucket>&quot;Guinea&quot;</bucket>
+              <bucket>&quot;Namibia&quot;</bucket>
+              <bucket>&quot;Congo&quot;</bucket>
+              <bucket>&quot;Mongolia&quot;</bucket>
+              <bucket>&quot;Senegal&quot;</bucket>
+              <bucket>&quot;Gabon&quot;</bucket>
+              <bucket>&quot;Afghanistan&quot;</bucket>
+              <bucket>&quot;Mauritius&quot;</bucket>
+              <bucket>&quot;Nicaragua&quot;</bucket>
+              <bucket>&quot;Jamaica&quot;</bucket>
+              <bucket>&quot;Fiji&quot;</bucket>
+              <bucket>&quot;Moldova&quot;</bucket>
+              <bucket>&quot;Papua New Guinea&quot;</bucket>
+              <bucket>&quot;Rwanda&quot;</bucket>
+              <bucket>&quot;French Guiana&quot;</bucket>
+              <bucket>&quot;Madagascar&quot;</bucket>
+              <bucket>&quot;Liberia&quot;</bucket>
+              <bucket>&quot;Equatorial Guinea&quot;</bucket>
+              <bucket>&quot;Burkina Faso&quot;</bucket>
+              <bucket>&quot;Togo&quot;</bucket>
+              <bucket>&quot;Lesotho&quot;</bucket>
+              <bucket>&quot;Burundi&quot;</bucket>
+              <bucket>&quot;Sierra Leone&quot;</bucket>
+              <bucket>&quot;Swaziland&quot;</bucket>
+              <bucket>&quot;Niger&quot;</bucket>
+              <bucket>&quot;Mauritania&quot;</bucket>
+              <bucket>&quot;Central African Republic&quot;</bucket>
+              <bucket>&quot;Palestine&quot;</bucket>
+              <bucket>&quot;Cape Verde&quot;</bucket>
+              <bucket>&quot;Suriname&quot;</bucket>
+              <bucket>&quot;Saint Lucia&quot;</bucket>
+              <bucket>&quot;Yemen&quot;</bucket>
+              <bucket>&quot;Western Sahara&quot;</bucket>
+              <bucket>&quot;Turkmenistan&quot;</bucket>
+              <bucket>&quot;Trinidad and Tobago&quot;</bucket>
+              <bucket>&quot;Singapore&quot;</bucket>
+              <bucket>&quot;Qatar&quot;</bucket>
+              <bucket>&quot;Libya&quot;</bucket>
+              <bucket>&quot;Lebanon&quot;</bucket>
+              <bucket>&quot;Kosovo&quot;</bucket>
+              <bucket>&quot;Guyana&quot;</bucket>
+              <bucket>&quot;Guinea-Bissau&quot;</bucket>
+              <bucket>&quot;Gambia&quot;</bucket>
+              <bucket>&quot;Eritrea&quot;</bucket>
+              <bucket>&quot;Djibouti&quot;</bucket>
+              <bucket>&quot;Cyprus&quot;</bucket>
+              <bucket>&quot;Brunei Darussalam&quot;</bucket>
+              <bucket>&quot;Botswana&quot;</bucket>
+              <bucket>&quot;Benin&quot;</bucket>
+              <bucket>&quot;Antarctica&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.0coqpjl0z9wkpz19hbrhe1xqrcwk].[sum:avg_output_gwh_13_to_17:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0coqpjl0z9wkpz19hbrhe1xqrcwk].[sum:avg_output_gwh_13_to_17:qk]' scope='rows' value='AVG POWER GENERATED 2013-17' />
+            <format attr='auto-subtitle' class='0' field='[federated.0coqpjl0z9wkpz19hbrhe1xqrcwk].[sum:avg_output_gwh_13_to_17:qk]' scope='rows' value='false' />
+            <format attr='subtitle' class='0' field='[federated.0coqpjl0z9wkpz19hbrhe1xqrcwk].[sum:avg_output_gwh_13_to_17:qk]' scope='rows' value='gwh' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.0coqpjl0z9wkpz19hbrhe1xqrcwk].[sum:avg_output_gwh_13_to_17:qk]' num-steps='50' type='custom-interpolated'>
+              <color-palette custom='true' name='' type='ordered-sequential'>
+                <color>#f1f1f1</color>
+                <color>#d0e7e3</color>
+                <color>#b2ded5</color>
+                <color>#95d5c8</color>
+                <color>#7accbc</color>
+                <color>#61c3b0</color>
+                <color>#4ab9a4</color>
+                <color>#34b098</color>
+                <color>#21a78d</color>
+                <color>#0f9e82</color>
+                <color>#009578</color>
+              </color-palette>
+            </encoding>
+            <encoding attr='color' center='2000' field='[federated.1fu17pp00kc6wu13w7sln1ujlo4g].[sum:number_of_power_plants:qk]' num-steps='199' palette='tableau-orange-blue-light' symmetric='false' type='interpolated' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1fu17pp00kc6wu13w7sln1ujlo4g].[sum:number_of_power_plants:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='has-stroke' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0coqpjl0z9wkpz19hbrhe1xqrcwk].[sum:avg_output_gwh_13_to_17:qk]</rows>
+        <cols>[federated.1fu17pp00kc6wu13w7sln1ujlo4g].[none:country:nk]</cols>
+      </table>
+      <simple-id uuid='{68703831-C572-453A-80BF-87D81DA31C20}' />
+    </worksheet>
+    <worksheet name='POWER FROM A FUEL VS HOW MUCH IT IS USED'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Average Power Generated from a Fuel with respect to the number of Power Plants using that Fuel</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='DIFFERENT FUEL TYPES COUNT' name='federated.1p27iui0qk01ha14arllh1lc71zt' />
+            <datasource caption='AVG POWER OUT BY FUEL' name='federated.0sl0c4w0rs4rzn15e3g5k1waj2qq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0sl0c4w0rs4rzn15e3g5k1waj2qq'>
+            <column caption='Avg Output 13 To 17 Gwh' datatype='real' name='[avg_output_13_to_17_gwh]' role='measure' type='quantitative' />
+            <column-instance column='[avg_output_13_to_17_gwh]' derivation='Sum' name='[sum:avg_output_13_to_17_gwh:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1p27iui0qk01ha14arllh1lc71zt'>
+            <column caption='Count As Fuel 1' datatype='integer' name='[count_as_fuel_1]' role='measure' type='quantitative' />
+            <column caption='Fuel' datatype='string' name='[fuel]' role='dimension' type='nominal' />
+            <column-instance column='[fuel]' derivation='None' name='[none:fuel:nk]' pivot='key' type='nominal' />
+            <column-instance column='[count_as_fuel_1]' derivation='Sum' name='[sum:count_as_fuel_1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1p27iui0qk01ha14arllh1lc71zt].[none:fuel:nk]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[none:fuel:nk]' />
+              <groupfilter function='union'>
+                <groupfilter function='member' level='[none:fuel:nk]' member='&quot;Wave and Tidal&quot;' />
+                <groupfilter function='member' level='[none:fuel:nk]' member='%null%' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.1p27iui0qk01ha14arllh1lc71zt].[none:fuel:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;Coal&quot;</bucket>
+              <bucket>&quot;Hydro&quot;</bucket>
+              <bucket>&quot;Gas&quot;</bucket>
+              <bucket>&quot;Nuclear&quot;</bucket>
+              <bucket>&quot;Wind&quot;</bucket>
+              <bucket>&quot;Solar&quot;</bucket>
+              <bucket>&quot;Oil&quot;</bucket>
+              <bucket>&quot;Waste&quot;</bucket>
+              <bucket>&quot;Biomass&quot;</bucket>
+              <bucket>&quot;Geothermal&quot;</bucket>
+              <bucket>&quot;Petcoke&quot;</bucket>
+              <bucket>&quot;Other&quot;</bucket>
+              <bucket>&quot;Cogeneration&quot;</bucket>
+              <bucket>&quot;Storage&quot;</bucket>
+              <bucket>&quot;Wave and Tidal&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.1p27iui0qk01ha14arllh1lc71zt].[none:fuel:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0sl0c4w0rs4rzn15e3g5k1waj2qq].[sum:avg_output_13_to_17_gwh:qk]' scope='rows' value='AVERAGE POWER GENERATED 2013-17' />
+            <format attr='auto-subtitle' class='0' field='[federated.0sl0c4w0rs4rzn15e3g5k1waj2qq].[sum:avg_output_13_to_17_gwh:qk]' scope='rows' value='false' />
+            <format attr='subtitle' class='0' field='[federated.0sl0c4w0rs4rzn15e3g5k1waj2qq].[sum:avg_output_13_to_17_gwh:qk]' scope='rows' value='gwh' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1p27iui0qk01ha14arllh1lc71zt].[sum:count_as_fuel_1:qk]' palette='tableau-map-blue-green' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1p27iui0qk01ha14arllh1lc71zt].[sum:count_as_fuel_1:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9890055656433105' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0sl0c4w0rs4rzn15e3g5k1waj2qq].[sum:avg_output_13_to_17_gwh:qk]</rows>
+        <cols>[federated.1p27iui0qk01ha14arllh1lc71zt].[none:fuel:nk]</cols>
+      </table>
+      <simple-id uuid='{89E78524-6A55-4B4C-A306-C2EC616C1E0C}' />
+    </worksheet>
+    <worksheet name='Sheet 3'>
+      <table>
+        <view>
+          <datasources />
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7C05717D-F3E7-4C2E-A1D5-EC7697B683D0}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='93'>
+    <window class='worksheet' name='POWER FROM A FUEL VS HOW MUCH IT IS USED'>
+      <cards>
+        <edge name='left'>
+          <strip size='141'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.1p27iui0qk01ha14arllh1lc71zt].[sum:count_as_fuel_1:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0sl0c4w0rs4rzn15e3g5k1waj2qq].[none:fuel:nk]</field>
+            <field>[federated.1p27iui0qk01ha14arllh1lc71zt].[none:fuel:nk]</field>
+            <field>[federated.1p27iui0qk01ha14arllh1lc71zt].[sum:count_as_fuel_1:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7F923CF2-5998-48CB-BD68-62775D290C97}' />
+    </window>
+    <window class='worksheet' name='POWER FROM A COUNTRY VS THE NUMBER OF POWER PLANTS IT HAS'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.1fu17pp00kc6wu13w7sln1ujlo4g].[sum:number_of_power_plants:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0coqpjl0z9wkpz19hbrhe1xqrcwk].[sum:avg_output_gwh_13_to_17:qk]</field>
+            <field>[federated.1fu17pp00kc6wu13w7sln1ujlo4g].[none:country:nk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='2' />
+      </viewpoint>
+      <simple-id uuid='{29BAE278-4090-4823-8D06-08094A66570F}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 3'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{178F05EB-60BD-4371-ABB3-1A49F1067C47}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='POWER FROM A COUNTRY VS THE NUMBER OF POWER PLANTS IT HAS' width='384'>
+      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
+    </thumbnail>
+    <thumbnail height='384' name='POWER FROM A FUEL VS HOW MUCH IT IS USED' width='384'>
+      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
+    </thumbnail>
+    <thumbnail height='384' name='Sheet 3' width='384'>
+      iVBORw0KGgoAAAANSUhEUgAAAYAAAAGACAYAAACkx7W/AAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAFXUlEQVR4nO3VMQEAIAzAMMC/5yFjRxMF/XpnZg4AOW87AIAdBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABR
+      BgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUA
+      AFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQ
+      ZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEG
+      ABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAA
+      UQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBl
+      AABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEGABBlAABRBgAQZQAAUQYA
+      EGUAAFEGABBlAABRBgAQZQAAUQYAEGUAAFEfFxoG/IiMv0YAAAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
