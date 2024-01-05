@@ -211,7 +211,7 @@ AND POWER_OUT_2017 IS NOT NULL));
 
 
 
---WE CREATE COLUMN FO RAVG POWER OUTPUT FROM 2-13-17 IN THE TOTAL POWER BY COUNTRY TABLE
+--WE CREATE COLUMN FOR AVG POWER OUTPUT FROM 2-13-17 IN THE TOTAL POWER BY COUNTRY TABLE
 
 
 ALTER TABLE TOTAL_POWER_BY_COUNTRY ADD COLUMN AVG_OUT_13_17_GWH numeric;
@@ -284,7 +284,7 @@ SELECT * FROM FRACT_POW_BY_FUEL_COUNTRY;
 
 
 -- Which countries have the most advanced power plants?
--- Can be found out by considering the pps with the highest capacity oe avg capacity by country
+-- Can be found out by considering the pps with the highest capacity or avg capacity by country
 
 
 --We check on what the average and maximum capacity of power plants is by country:
@@ -362,16 +362,22 @@ DELETE WHERE COMMISSIONING_YEAR IS NULL;
 --WE UPDATE TOTAL POWER BY FUEL
 
 -- Add a new column to the table
+
+
 ALTER TABLE TOTAL_POWER_BY_FUEL
 ADD COLUMN COUNT_AS_FUEL_1 INT;
 
+
+
 -- Update the new column with the count values
+
+
 UPDATE TOTAL_POWER_BY_FUEL
 SET COUNT_AS_FUEL_1 = (
     SELECT COUNT(FUEL_1) 
     FROM FUEL_TYPES
     WHERE FUEL_TYPES.FUEL_1 = TOTAL_POWER_BY_FUEL.FUEL
-);
+    );
 
 -- Add a new column to the table
 ALTER TABLE TOTAL_POWER_BY_FUEL
